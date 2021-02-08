@@ -194,6 +194,10 @@ body {
   color: var(--white-text);
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .card {
   background-color: var(--background-card);
 }
