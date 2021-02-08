@@ -1,30 +1,27 @@
 body {
-font-family: Roboto, sans-serif;
-font-style: normal;
-font-weight: bold;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
 }
 
 /* Шапка сайта */
 
 .page-header {
-font-style: normal;
-font-weight: 500;
+  font-style: normal;
+  font-weight: 500;
 
-
-color: var(--black-text);
-background-color: var(--white-text);
+  color: var(--black-text);
+  background-color: var(--white-text);
 }
 
 .logo {
-font-family: Raleway;
-font-style: normal;
-font-weight: bold;
-font-size: 26px;
-line-height: 1.19;
-
-letter-spacing: 0.03em;
-
-color: var(--black-text-logo);
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--black-text-logo);
 }
 
 .logo span {
@@ -32,19 +29,19 @@ color: var(--black-text-logo);
 }
 
 .site-nav .link {
-color: var(--black-text);
+  color: var(--black-text);
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus {
-color: var(--blue-text);
+  color: var(--blue-text);
 }
 
 .site-nav .link.current {
@@ -52,7 +49,7 @@ color: var(--blue-text);
 }
 
 .contact {
- color: var(--gray-text);
+  color: var(--gray-text);
 }
 
 .contact:hover,
@@ -62,18 +59,17 @@ color: var(--blue-text);
 
 /* Герой */
 .hero {
-background-color: var(--background);
+  background-color: var(--background);
 
-width:1600px; 
-height: 600px;
+  width: 1600px;
+  height: 600px;
 }
 
 .hero-title {
+  color: var(--white-text);
 
-color: var(--white-text);
-
-font-size: 44px;
-line-height: 1.36;
+  font-size: 44px;
+  line-height: 1.36;
 }
 
 .hero-button {
@@ -97,40 +93,31 @@ line-height: 1.36;
   margin: -1px;
   border: 0;
   padding: 0;
-  
+
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-
-
-.featur-titile {
-color: var(--black-text);
-font-size: 14px;
-line-height: 1.14;
-text-transform: uppercase;
-}
-
 .featur-text {
   color: var(--gray-text);
   font-weight: normal;
- font-size: 14px;
-line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.7;
 
-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
 }
 
 /* Примеры работ */
 
 .work-title {
-font-size: 36px;
-line-height: 1.16;
-text-align: center;
-letter-spacing: 0.03em;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-color: var(--black-text);
+  color: var(--black-text);
 }
 
 /* Команда */
@@ -139,50 +126,50 @@ color: var(--black-text);
 }
 
 .team-title {
-font-size: 36px;
-line-height: 1.16;
-text-align: center;
-letter-spacing: 0.03em;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .team-name {
-font-weight: 500;
-font-size: 16px;
-line-height: 1.18;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
 
-text-align: center;
-letter-spacing: 0.03em;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-color: var(--black-text);
+  color: var(--black-text);
 }
 
 .team-position {
-font-size: 16px;
-line-height: 1.18;
+  font-size: 16px;
+  line-height: 1.18;
 
-text-align: center;
-letter-spacing: 0.03em;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-color: var(--gray-text);
+  color: var(--gray-text);
 }
 
 /* Футел */
 .footer {
-background-color: var(--background);
-width: 1600px;
-height: 252px;
+  background-color: var(--background);
+  width: 1600px;
+  height: 252px;
 }
 
 .footer-logo {
-color: var(--white-text);
+  color: var(--white-text);
 
-font-family: Raleway;
-font-style: normal;
-font-weight: bold;
-font-size: 26px;
-line-height: 1.19;
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
 
-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
 }
 
 .footer-logo span {
@@ -202,7 +189,7 @@ letter-spacing: 0.03em;
 }
 
 .button-button:hover,
-.button-button:focus  {
+.button-button:focus {
   background-color: var(--blue-text);
   color: var(--white-text);
 }
@@ -212,18 +199,17 @@ letter-spacing: 0.03em;
 }
 
 .card-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
 
-font-size: 18px;
-line-height: 36px;
-letter-spacing: 0.06em;
-
-color: var(--black-text);
+  color: var(--black-text);
 }
 
 .card-project {
-font-size: 16px;
-line-height: 30px;
-letter-spacing: 0.03em;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
 
-color: var(--gray-text);
+  color: var(--gray-text);
 }
