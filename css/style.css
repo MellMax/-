@@ -4,14 +4,42 @@ body {
   font-weight: bold;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  border: 1px solid red;
+}
+
 /* Шапка сайта */
 
 .page-header {
+  display: flex;
   font-style: normal;
   font-weight: 500;
 
   color: var(--black-text);
   background-color: var(--white-text);
+}
+
+.page-header .container {
+  display: flex;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
 }
 
 .logo {
@@ -28,9 +56,27 @@ body {
   color: var(--blue-text);
 }
 
-.site-nav .link {
-  color: var(--black-text);
+.header-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
 
+.list .list-item + .list-item {
+  margin-left: 50px;
+}
+
+.site-nav .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.site-nav .link {
+  align-items: flex-start;
+  justify-content: space-between;
+  display: flex;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -43,6 +89,18 @@ body {
 .site-nav .link:focus {
   color: var(--blue-text);
 }
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* .site-nav li {
+  margin-right: 50px;
+} */
+
+/* .site-nav li:last-child {
+  margin-right: 0;
+} */
 
 .site-nav .link.current {
   color: var(--blue-text);
@@ -60,9 +118,7 @@ body {
 /* Герой */
 .hero {
   background-color: var(--background);
-
-  width: 1600px;
-  height: 600px;
+  text-align: center;
 }
 
 .hero-title {
@@ -70,14 +126,22 @@ body {
 
   font-size: 44px;
   line-height: 1.36;
+  margin-top: 0;
+  margin-bottom: 45px;
 }
 
 .hero-button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 1px solid transparent;
+
   color: var(--white-text);
   background-color: var(--blue-text);
-
   font-size: 16px;
+  line-height: 1.8;
   font-style: normal;
+  text-align: center;
 }
 
 /* Преймущества */
@@ -100,13 +164,19 @@ body {
   overflow: hidden;
 }
 
+.featur-titile {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
 .featur-text {
   color: var(--gray-text);
   font-weight: normal;
   font-size: 14px;
   line-height: 1.7;
-
   letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 /* Примеры работ */
@@ -118,6 +188,7 @@ body {
   letter-spacing: 0.03em;
 
   color: var(--black-text);
+  margin-bottom: 50px;
 }
 
 /* Команда */
@@ -130,6 +201,7 @@ body {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
 }
 
 .team-name {
@@ -186,6 +258,14 @@ body {
 .button {
   background-color: var(--background-team);
   color: var(--black-text);
+}
+
+.button-button {
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid transparent;
 }
 
 .button-button:hover,
