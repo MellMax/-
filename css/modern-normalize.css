@@ -5,6 +5,14 @@
 /* обнуляем дефолтные маркеры у всех маркированных списков */
 ul {
   list-style: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+* {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* обнуляем дефолтные подчеркивания у всех ссылок */
