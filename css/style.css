@@ -125,7 +125,7 @@ p {
   margin-right: 50px;
 }
 
-.site-nav .link.current {
+.site-nav .link-nav.current {
   color: var(--logo);
 }
 
