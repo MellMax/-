@@ -4,6 +4,10 @@ body {
   font-weight: bold;
 }
 
+img {
+  display: block;
+}
+
 h1,
 h2,
 h3,
@@ -33,6 +37,7 @@ p {
   font-weight: 500;
   color: var(--page-text);
   background-color: var(--color-text);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .page-header,
@@ -94,7 +99,7 @@ p {
   margin-right: 93px;
 }
 
-.link {
+.link-nav {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -108,6 +113,7 @@ p {
 .site-nav .link-nav {
   align-items: flex-start;
   justify-content: space-between;
+  display: block;
 
   font-weight: 500;
   font-size: 14px;
@@ -235,11 +241,13 @@ p {
 }
 
 .thumb {
-  padding: 25px 0;
+  height: 120px;
+  width: 270px;
   margin-bottom: 30px;
   border-radius: 4px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: var(--background-team);
 }
 
@@ -395,10 +403,12 @@ p {
 .link {
   width: 44px;
   height: 44px;
-  padding: 12px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   border-radius: 50%;
   color: var(--icon-social);
-  justify-content: center;
+
 }
 
 .item {
@@ -419,9 +429,9 @@ p {
 }
 
 /* Клиенты */
-.clients .container {
+.clients {
   padding-top: 94px;
-  padding-bottom: 94px;
+  padding-bottom: 90px;
   display: block;
 }
 
@@ -510,8 +520,9 @@ p {
 }
 
 .footer .footer-content {
-  display: block;
+  /* display: block; */
   margin-bottom: 0;
+  vertical-align: baseline;
 }
 
 .footer-logo {
@@ -562,8 +573,9 @@ p {
 }
 
 .footer-social {
-  display: block;
+  /* display: block; */
   margin-left: 70px;
+  vertical-align: baseline;
 }
 
 .footer-social .item {
@@ -599,8 +611,11 @@ p {
   justify-content: center;
 }
 
-.button-button {
+.button-list li {
   margin-right: 8px;
+}
+
+.button-button {
   display: inline-block;
   padding: 6px 21px;
 
