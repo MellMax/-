@@ -2,6 +2,7 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
+  outline: none;
 }
 
 img {
@@ -56,6 +57,8 @@ p {
 }
 
 .logo {
+  margin-right: 93px;
+
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -64,8 +67,6 @@ p {
   letter-spacing: 0.03em;
   color: var(--text-logo);
   text-decoration: none;
-
-  margin-right: 93px;
 }
 
 .logo span {
@@ -151,8 +152,6 @@ p {
 }
 
 .icon-contact {
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
   fill: currentColor;
 }
@@ -424,7 +423,7 @@ p {
 
 .list-social .link:hover,
 .list-social .link:focus {
-  background-color: var(--icon-hover);
+  /* background-color: var(--icon-hover); */
   color: var(--color-text);
 }
 
@@ -504,8 +503,8 @@ p {
 
 .item .link:hover,
 .item .link:focus {
-  background-color: var(--icon-hover);
-  color: var(--color-text);
+  color: var(--icon-hover);
+  border: 1px solid var(--icon-hover);
 }
 
 /* Футер */
@@ -520,7 +519,6 @@ p {
 }
 
 .footer .footer-content {
-  /* display: block; */
   margin-bottom: 0;
   vertical-align: baseline;
 }
@@ -541,6 +539,11 @@ p {
 
 .contacts-links {
   margin-top: 29px;
+  
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .footer-address {
@@ -550,6 +553,7 @@ p {
 
 .footer-contact {
   display: block;
+
 }
 
 .footer-contact .contact {
@@ -573,7 +577,6 @@ p {
 }
 
 .footer-social {
-  /* display: block; */
   margin-left: 70px;
   vertical-align: baseline;
 }
