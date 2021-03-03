@@ -18,6 +18,13 @@ h6,
 p {
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+:hover, 
+:focus {
+  transition: color, background-color, shadow 250ms var(--cubic);
 }
 
 .container {
@@ -101,10 +108,29 @@ p {
 }
 
 .link-nav {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color 250ms var(--cubic);
 }
+
+.link-nav.current::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  bottom: -1;
+  margin: 0 auto;
+  margin-top: 28px;
+
+  width: 100%;
+  height: 4px;
+  background-color: var(--icon-hover);
+  border-radius: 2px;
+  transition: color 250ms var(--cubic);
+}
+
 
 .site-nav,
 .header-list {
@@ -136,14 +162,20 @@ p {
   color: var(--logo);
 }
 
-.list-item .contact {
-  display: block;
-}
-
 .contact {
+  display: flex;
+  align-items: center;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   color: var(--cord-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color 250ms var(--cubic);
+
 }
 
 .contact:hover,
@@ -161,7 +193,8 @@ p {
   padding: 200px 0;
   margin-left: auto;
   margin-right: auto;
-
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   justify-content: center;
   min-height: 600px;
@@ -174,12 +207,20 @@ p {
   background-size: cover;
 }
 
+.hero-container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 696px;
+}
+
 .hero-title {
+  font-weight: 900;
   margin-bottom: 30px;
 
   color: var(--color-text);
   font-size: 44px;
   line-height: 1.36;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -195,7 +236,9 @@ p {
   line-height: 1.8;
   font-style: normal;
   text-align: center;
+  transition: color 250ms var(--cubic);
 }
+
 
 /* Преймущества */
 
@@ -267,34 +310,6 @@ p {
   letter-spacing: 0.03em;
   text-align: left;
 }
- 
-/* .list-feature::before {
-  content: "";
-  display: block;
-  margin-bottom: 30px;
-  height: 120px;
-  width: 270px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--background-icon);
-  padding: 25px 0;
-}
-
-.list-feature:nth-child(1)::before {
-  background-image: url("../img/antenna\ 1.svg");
-}
-
-.list-feature:nth-child(2)::before {
-  background-image: url("../img/clock\ 1.svg");
-}
-
-.list-feature:nth-child(3)::before {
-  background-image: url("../img/diagram\ 1.svg");
-}
-
-.list-feature:nth-child(4)::before {
-  background-image: url("../img/astronaut\ 1.svg");
-} */
 
 .team-card {
   background-color: var(--color-text);
@@ -339,12 +354,35 @@ p {
   padding: 0;
   margin: 0;
   display: flex;
-  width: 270px;
 }
 
 .work-list li {
+
   margin-right: 30px;
   justify-content: center;
+}
+
+.trumb-label {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  background-color: var(--background-label);
 }
 
 .work-list li:last-child {
@@ -407,6 +445,7 @@ p {
   justify-content: center;
   border-radius: 50%;
   color: var(--icon-social);
+  transition: background-color 250ms var(--cubic);
 
 }
 
@@ -423,8 +462,8 @@ p {
 
 .list-social .link:hover,
 .list-social .link:focus {
-  /* background-color: var(--icon-hover); */
   color: var(--color-text);
+  background-color: var(--icon-hover);
 }
 
 /* Клиенты */
@@ -438,14 +477,14 @@ p {
   display: flex;
 }
 
-.list-clients .item {
+.list-clients .item-clients {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-right: 30px;
 }
 
-.list-clients .item:last-child {
+.list-clients .item-clients:last-child {
   margin-right: 0;
 }
 
@@ -501,8 +540,8 @@ p {
   height: 45px;
 } 
 
-.item .link:hover,
-.item .link:focus {
+.item-clients .link:hover,
+.item-clients .link:focus {
   color: var(--icon-hover);
   border: 1px solid var(--icon-hover);
 }
@@ -593,9 +632,10 @@ p {
   background-color: var(--color-text-op);
 }
 
-/* .link .icon-social {
-  fill: var(--color-text);
-} */
+.link.social {
+  color: var(--color-text);
+}
+
 
 /* Проэкты портфолио */
 /* Кнопки */
@@ -619,12 +659,12 @@ p {
 }
 
 .button-button {
-  display: inline-block;
   padding: 6px 21px;
 
   border-radius: 4px;
   text-align: center;
   border: 1px solid transparent;
+  font-weight: 500;
 }
 
 .button-button:hover,
@@ -633,10 +673,64 @@ p {
   color: var(--color-text);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: color 250ms var(--cubic);
 }
 
 .pointer {
   cursor: pointer;
+}
+
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 581px;
+  min-width: 528px;
+  padding: 15px;
+  background-color: var(--background-card); 
+}
+
+.btn-close {
+  position: absolute;
+  display: block;
+  top: 14px;
+  right: 14px;
+
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--background-card);
+  border-radius: 50%;
+}
+
+.icon-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  fill: currentColor;
+  transition: color 250ms var(--cubic);
 }
 
 /* Портфолио */
@@ -650,13 +744,25 @@ p {
   flex-wrap: wrap;
 }
 
-.card {
+.portfolio-list .card {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 
   list-style: none;
   background-color: var(--background-card);
+
+  transition: color 250ms var(--box-shadow);
+  cursor: pointer;
+}
+
+
+.card:hover .overlay-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:nth-child(3n) {
@@ -667,12 +773,61 @@ p {
   margin-bottom: 0;
 }
 
+.portfolio-list-item {
+  display: block;
+}
+
+.portfolio-list-item:hover, .overlay-card
+.portfolio-list-item:focus .overlay-card {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-trumb {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.card-trumb:hover .overlay-card {
+  opacity: 1;
+  background-color: rgba(33,150,243,0.9);
+  transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-card {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33,150,243,0.9);
+  transform: translateY(100%);
+}
+
+.overlay-text {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  padding: 63px 24px;
+  transition: color 250ms var(--cubic);
+}
+
 .card-title-project {
   padding: 20px 24px;
   border-right: 1px solid var(--background-card-project);
   border-bottom: 1px solid var(--background-card-project);
   border-left: 1px solid var(--background-card-project);
   border-radius: 4px;
+}
+
+.card-title-project:hover .overlay-text {
+  transform: translateY(0);
+  transition: color 250ms var(--cubic);
 }
 
 .card-title {
