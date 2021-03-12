@@ -120,7 +120,7 @@ p {
   content: "";
   display: block;
   left: 0;
-  bottom: -1;
+  bottom: -1px;
   margin: 0 auto;
   margin-top: 28px;
 
@@ -141,6 +141,7 @@ p {
   justify-content: space-between;
   display: block;
 
+  bottom: -1px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -230,6 +231,7 @@ p {
   padding: 10px 32px;
   border: 1px solid transparent;
 
+  min-width: 200px;
   color: var(--color-text);
   background-color: var(--logo);
   font-size: 16px;
@@ -560,14 +562,18 @@ p {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer .footer-content {
-  margin-bottom: 0;
+  margin: 0;
   vertical-align: baseline;
 }
 
 .footer-logo {
+  display: block;
+  margin-bottom: 20px;
+
   color: var(--color-text);
   font-family: Raleway, sans-serif;
   font-style: normal;
@@ -582,8 +588,6 @@ p {
 }
 
 .contacts-links {
-  margin-top: 29px;
-  
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -643,6 +647,44 @@ p {
   color: var(--color-text);
 }
 
+.footer-form {
+  margin-left: 93px;
+}
+
+.footer-form label {
+  display: inline-block;
+}
+
+.footer-form .input {
+  height: 50px;
+  min-width: 358px;
+  padding: 15px 16px;
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.footer-form .hero-button {
+  display: inline-block;
+  align-items: center;
+  margin-left: 12px;
+  padding: 10px 29px;
+  min-width: 200px;
+  height: 50px;
+}
+
+.input::placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.footer-icon {
+  margin-left: 10px;
+  vertical-align: middle;
+  fill: var(--color-text);
+}
 
 /* Проэкты портфолио */
 /* Кнопки */
@@ -692,7 +734,7 @@ p {
   cursor: pointer;
 }
 
-
+/* modal */
 .backdrop {
   position: fixed;
   top: 0;
@@ -701,16 +743,22 @@ p {
   height: 100%;
   background-color: var(--modal);
   opacity: 1;
-  transition: opacity 250ms  var(--cubic);
+  visibility: visible;
+
+  transition: opacity, visibility 250ms var(--cubic);
+  pointer-events: none;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
+  transition: opacity, visibility 250ms var(--cubic);
 }
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.1);
+  transition: opacity 250ms var(--cubic);
 }
 
 .modal {
@@ -720,12 +768,140 @@ p {
 
   min-height: 581px;
   min-width: 528px;
-  padding: 15px;
+  padding: 40px;
   background-color: var(--background-card); 
-  opacity: 1;
+    
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms  var(--cubic);
+  overflow-y: auto;
+  pointer-events: auto;
+
+}
+
+.form {
+  width: 448px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.form-tittle h2 {
+  margin-bottom: 12px;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.form-fild {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.form-fild label {
+  margin-bottom: 4px;
+  color: var(--cord-color);
+}
+
+.form-fild textarea {
+  resize: none;
+  padding: 11px 12px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input {
+  padding: 11px 12px 11px 42px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+
+}
+
+.input:focus {
+  border-color: var(--icon-hover);
+  transition: border-color 250ms var(--cubic);
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.input:focus + .form-icon {
+  fill: var(--icon-hover);
+  transition: border-color 250ms var(--cubic);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox-icon {
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  
+  border: 2px solid #2a2a2a;
+  border-radius: 2px;
+  cursor: pointer;
+  fill: var(--color-text);
+
+
+  transition: fill, background-color, border-color 250ms var(--cubic);
+  
+}
+
+.checkbox-input:focus + .checkbox-icon {
+  border-color: var(--icon-hover);
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  background-color: var(--icon-hover);
+  border-color: var(--icon-hover);
+
+  border: 0 solid transparent;
+}
+ 
+.contract {
+  color: var(--logo);
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .btn-close {
@@ -754,6 +930,12 @@ p {
   transition: color 250ms var(--cubic);
 }
 
+.icon-close:hover,
+.icon-close:focus {
+  color: var(--icon-hover);
+  transition: color 250ms var(--cubic)
+}
+
 /* Портфолио */
 
 .portfolio {
@@ -777,7 +959,7 @@ p {
   cursor: pointer;
 }
 
-
+.card:focus .overlay-card,
 .card:hover .overlay-card {
   opacity: 1;
   transform: translateY(0);
@@ -799,23 +981,22 @@ p {
   transition: box-shadow 250ms var(--cubic);
 }
 
-.portfolio-list-item:hover, .overlay-card
-.portfolio-list-item:focus .overlay-card {
+.portfolio-list-item:hover, 
+.portfolio-list-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+ 
+}
+
+.portfolio-list-item:hover .overlay-card, 
+.portfolio-list-item:focus .overlay-card {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-trumb {
   position: relative;
   overflow: hidden;
-}
-
-
-.card-trumb:hover .overlay-card {
-  opacity: 1;
-  background-color: rgba(33,150,243,0.9);
-  transform: translateY(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay-card {
@@ -848,7 +1029,8 @@ p {
   border-radius: 4px;
 }
 
-.card-title-project:hover .overlay-text {
+.card-title-project:hover .overlay-text,
+.card-title-project:focus .overlay-text {
   transform: translateY(0);
   transition: color 250ms var(--cubic);
 }

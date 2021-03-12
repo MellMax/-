@@ -376,10 +376,75 @@
           </li>
         </ul>
       </div> 
+      <form class="footer-form">
+        <p class="footer-tittle">Подпишитесь на рассылку</p>
+        <label>
+          <input class="input" type="text" name="email" placeholder="E-mail" id="email">
+        </label>
+        <button class="hero-button pointer" type="submit">Подписаться
+          <svg class="footer-icon" width="24" height="24">
+            <use href="./img/sprite.svg#icon-plane"></use>
+          </svg>
+        </button>
+      </form>
     </div>
   </footer>
+
+  <!-- Modal -->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
+      <form class="form">
+        <div class="form-tittle">
+          <p>Оставьте свои данные, мы вам перезвоним </p>
+        </div>
+        <div class="form-fild">
+          <label for="name">Имя</label>
+          <div class="input-container">
+            <input class="input" type="text" name="name" id="name">
+            <svg class="form-icon" width="18" height="18">
+              <use href="./img/sprite.svg#icon-name"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="form-fild">
+          <label for="tel">Телефон</label>
+          <div class="input-container">
+            <input class="input" type="text" name="tel" id="tel">
+            <svg class="form-icon" width="18" height="18">
+              <use href="./img/sprite.svg#icon-phone"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="form-fild">
+          <label for="mail">Почта</label>
+          <div class="input-container">
+            <input class="input" type="text" name="mail" id="mail">
+            <svg class="form-icon" width="18" height="18">
+              <use href="./img/sprite.svg#icon-mail"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="form-fild">
+          <label for="comment">Комментарий</label>
+          <textarea class="input" name="comment" id="comment" rows="10" placeholder="Введите текст" autofocus></textarea>
+        </div>
+
+        <div class="form-fild">
+          <label class="checkbox-label">
+            <input class="checkbox-input visually-hidden" type="checkbox" name="checkbox" value="conditions submited" >
+            <svg class="checkbox-icon" width="16" height="15">
+              <use href="./img/sprite.svg#icon-icon-black"></use>
+            </svg>
+            <span>Соглашаюсь с рассылкой и принимаю</span><a href="#" class="contract">Условия договора</a>
+        </label>
+        </div>
+        <div class="modal-button">
+          <button type="submit" class="hero-button pointer">Отправить</button>
+        </div>
+      </form>
       <button data-modal-close class="btn-close"><svg class="icon-close" width="18" height="18"><use href="./img/sprite.svg#icon-close"></use></svg></button>
     </div>
   </div>
