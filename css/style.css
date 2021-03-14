@@ -234,9 +234,10 @@ p {
   min-width: 200px;
   color: var(--color-text);
   background-color: var(--logo);
+  font-weight: bold;
+  font-style: normal;
   font-size: 16px;
   line-height: 1.8;
-  font-style: normal;
   letter-spacing: 0.06em;
   text-align: center;
   transition: color 250ms var(--cubic);
@@ -407,12 +408,13 @@ p {
 }
 
 .team-name {
+  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
+  letter-spacing: 0.03em;
 
   text-align: center;
-  letter-spacing: 0.03em;
 
   color: var(--page-text);
 }
@@ -686,54 +688,6 @@ p {
   fill: var(--color-text);
 }
 
-/* Проэкты портфолио */
-/* Кнопки */
-.button .container {
-  padding-top: 117px;
-  padding-bottom: 34px;
-
-  background-color: var(--background-card);
-  color: var(--page-text);
-}
-
-.button-list {
-  display: flex;
-  margin-bottom: 50px;
-  padding: 0;
-  justify-content: center;
-}
-
-.button-list li {
-  margin-right: 8px;
-}
-
-.button-button {
-  padding: 6px 21px;
-
-  border-radius: 4px;
-  text-align: center;
-  border: 1px solid transparent;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
-  transition: background-color 250ms var(--cubic), color 250ms var(--cubic),
-    box-shadow 250ms var(--cubic);
-}
-
-.button-button:hover,
-.button-button:focus {
-  background-color: var(--logo);
-  color: var(--color-text);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: color 250ms var(--cubic);
-}
-
-.pointer {
-  cursor: pointer;
-}
-
 /* modal */
 .backdrop {
   position: fixed;
@@ -758,7 +712,7 @@ p {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.1);
-  transition: opacity 250ms var(--cubic);
+  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
 }
 
 .modal {
@@ -771,19 +725,16 @@ p {
   padding: 40px;
   background-color: var(--background-card); 
     
-
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms  var(--cubic);
   overflow-y: auto;
   pointer-events: auto;
-
 }
 
 .form {
   width: 448px;
   align-items: center;
   justify-content: center;
-
 }
 
 .form-tittle p {
@@ -829,7 +780,6 @@ p {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
-
 }
 
 .input:focus {
@@ -842,6 +792,7 @@ p {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
+  transition: transform 250ms var(--cubic);
 }
 
 .input:focus + .form-icon {
@@ -927,7 +878,6 @@ p {
   transform: translate(-50%, -50%);
 
   fill: currentColor;
-  transition: color 250ms var(--cubic);
 }
 
 .icon-close:hover,
@@ -935,6 +885,56 @@ p {
   color: var(--icon-hover);
   transition: color 250ms var(--cubic)
 }
+
+
+/* Проэкты портфолио */
+/* Кнопки */
+.button .container {
+  padding-top: 117px;
+  padding-bottom: 34px;
+
+  background-color: var(--background-card);
+  color: var(--page-text);
+}
+
+.button-list {
+  display: flex;
+  margin-bottom: 50px;
+  padding: 0;
+  justify-content: center;
+}
+
+.button-list li {
+  margin-right: 8px;
+}
+
+.button-button {
+  padding: 6px 21px;
+
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  transition: background-color 250ms var(--cubic), color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
+}
+
+.button-button:hover,
+.button-button:focus {
+  background-color: var(--logo);
+  color: var(--color-text);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: color 250ms var(--cubic);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
 
 /* Портфолио */
 
@@ -963,9 +963,9 @@ p {
 .card:hover .overlay-card {
   opacity: 1;
   transform: translateY(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms var(--cubic),
+    opacity 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
 }
 
 .card:nth-child(3n) {
@@ -984,14 +984,14 @@ p {
 .portfolio-list-item:hover, 
 .portfolio-list-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
- 
+  transition: box-shadow 250ms var(--cubic);
 }
 
 .portfolio-list-item:hover .overlay-card, 
 .portfolio-list-item:focus .overlay-card {
   transform: translateY(0);
   opacity: 1;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic), box-shadow 250ms var(--cubic);
 }
 
 .card-trumb {
@@ -1018,7 +1018,7 @@ p {
   letter-spacing: 0.03em;
   color: var(--color-text);
   padding: 63px 24px;
-  transition: color 250ms var(--cubic);
+
 }
 
 .card-title-project {
@@ -1032,7 +1032,7 @@ p {
 .card-title-project:hover .overlay-text,
 .card-title-project:focus .overlay-text {
   transform: translateY(0);
-  transition: color 250ms var(--cubic);
+  transition: transform 250ms var(--cubic), color 250ms var(--cubic);
 }
 
 .card-title {
