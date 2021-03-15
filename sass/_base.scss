@@ -1,0 +1,31 @@
+
+  
+body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  outline: none;
+}
+  
+img {
+  display: block;
+}
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+  
+:hover, 
+:focus {
+  transition: color, background-color, shadow 250ms var(--cubic);
+}
+  

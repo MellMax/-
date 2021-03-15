@@ -27,6 +27,7 @@ kbd,
 samp,
 pre {
   font-family: 'Open Sans', sans-serif;
+  
   /* font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; 1 */
   font-size: 1em; /* 2 */
 }
@@ -208,7 +209,9 @@ Remove the inheritance of text transform in Edge and Firefox.
 
 button,
 select {
+
   /* 1 */
+
   text-transform: none;
 }
 

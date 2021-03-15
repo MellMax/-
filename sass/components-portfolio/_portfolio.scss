@@ -1,0 +1,115 @@
+.portfolio {
+  padding: 94px 0;
+}
+  
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+  
+.card {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  
+  list-style: none;
+  background-color: var(--background-card);
+  
+  transition: color 250ms var(--box-shadow);
+  cursor: pointer;
+
+  &:focus &__overlay,
+  &:hover &__overlay {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 250ms var(--cubic),
+      opacity 250ms var(--cubic),
+      box-shadow 250ms var(--cubic);
+  }
+  
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+  
+  &__link {
+    display: block;
+    transition: box-shadow 250ms var(--cubic);
+  }
+  
+  &__link:hover, 
+  &__link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: box-shadow 250ms var(--cubic);
+  }
+  
+  &__link:hover &__overlay, 
+  &__link:focus &__overlay {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 250ms var(--cubic), opacity 250ms var(--cubic), box-shadow 250ms var(--cubic);
+  }
+  
+  &__item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  &__overlay {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33,150,243,0.9);
+    transform: translateY(100%);
+    transition: transform 250ms var(--cubic);
+  }
+  
+  &__overlay-text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--color-text);
+    padding: 63px 24px;
+  
+  }
+  
+  &__title-project {
+    padding: 20px 24px;
+    border-right: 1px solid var(--background-card-project);
+    border-bottom: 1px solid var(--background-card-project);
+    border-left: 1px solid var(--background-card-project);
+    border-radius: 4px;
+  }
+  
+  &__title-project:hover &__overlay-text,
+  &__title-project:focus &__overlay-text {
+    transform: translateY(0);
+    transition: transform 250ms var(--cubic), color 250ms var(--cubic);
+  }
+  
+  &__title {
+    margin-bottom: 4px;
+  
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  
+    color: var(--page-text);
+  }
+  
+  &__project {
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+  
+    color: var(--cord-color);
+  }
+}
+  

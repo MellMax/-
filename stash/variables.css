@@ -1,0 +1,30 @@
+:root {
+  --logo: rgba(33, 150, 243, 1);
+
+  --background: rgba(47, 48, 58, 1);
+  --background-label: rgba(47, 48, 58, 0.8);
+
+  --page-text: rgba(33, 33, 33, 1);
+  --text-logo: rgba(0, 0, 0, 1);
+
+  --cord-color: rgba(117, 117, 117, 1);
+
+  --color-text: rgba(255, 255, 255, 1);
+  --text-op60: rgba(255, 255, 255, 0.6);
+
+  --background-team: rgba(245, 244, 250, 1);
+  --background-card: rgba(255, 255, 255, 1);
+  --background-card-project: rgba(238,238,238,1);
+
+  --background-icon: #F5F4FA;
+  --icon-social: rgba(175,177,184,1);
+  --icon-hover: rgba(33,150,243,1);
+
+  --color-text-op: rgba(255, 255, 255, 0.1);
+  --color2: #2196f3;
+  --border-color: rgba(236,236,236,1);
+  --modal: rgba(0,0,0,0.2);
+
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}

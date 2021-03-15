@@ -1,0 +1,149 @@
+.header {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  
+  font-style: normal;
+  font-weight: 500;
+  color: var(--page-text);
+  background-color: var(--color-text);
+  border-bottom: 1px solid var(--border-color);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-right: 93px;
+    
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--text-logo);
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+  }
+
+  &__span {
+    color: var(--logo);
+  }
+
+  &__site-nav {
+    display: flex;
+  }
+}
+  
+
+  
+.header-list {
+  padding: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    margin-left: 50px;
+  }
+
+  &__list-item:first-child {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+
+  &__link-nav {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms var(--cubic);
+  }
+
+  &__link-nav.current::after {
+    position: absolute;
+    content: " ";
+    display: block;
+    left: 0;
+    bottom: -1px;
+    margin: 0 auto;
+    margin-top: 28px;
+    
+    width: 100%;
+    height: 4px;
+    background-color: var(--icon-hover);
+    border-radius: 2px;
+  }
+
+  &__link-nav {
+    align-items: flex-start;
+    justify-content: space-between;
+    display: block;
+    
+    bottom: -1px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--text-logo);
+  }
+
+
+  &__link-nav:hover,
+  &__link-nav:focus {
+    color: var(--logo);
+  }
+  
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  
+  &__link-nav.current {
+    color: var(--logo);
+  }
+  
+  &__contact {
+    display: flex;
+    align-items: center;
+  
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--cord-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms var(--cubic);
+  }
+  
+  &__contact:hover,
+  &__contact:focus {
+    color: var(--logo);
+  }
+  
+  &__icon-contact {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+  
+
+  
+
+  
+  
+
+  
+
+  
