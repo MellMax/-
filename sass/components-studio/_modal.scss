@@ -6,22 +6,14 @@
   height: 100%;
   background-color: var(--modal);
   opacity: 1;
-  visibility: visible;
-  
-  transition: opacity, visibility 250ms var(--cubic);
   pointer-events: none;
+  transition: 250ms var(--cubic);
 }
   
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition: opacity, visibility 250ms var(--cubic);
-}
-  
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.1);
-  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
 }
   
 .modal {
@@ -31,13 +23,15 @@
   
   min-height: 581px;
   min-width: 528px;
-  padding: 40px;
+  padding: 40px; 
   background-color: var(--background-card); 
     
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms  var(--cubic);
+
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: transform 250ms var(--cubic);
   overflow-y: auto;
   pointer-events: auto;
+  
 
   &__button {
     display: flex;
@@ -61,6 +55,14 @@
     background-color: var(--background-card);
     border-radius: 50%;
   }
+
+  &__btn-close:hover,
+  &__btn-close:focus {
+    color: var(--icon-hover);
+    transition: color 250ms var(--cubic);
+  }
+
+ 
   
   &__icon-close {
     position: absolute;
@@ -71,11 +73,6 @@
     fill: currentColor;
   }
   
-  &__icon-close:hover,
-  &__icon-close:focus {
-    color: var(--icon-hover);
-    transition: color 250ms var(--cubic)
-  }
 }
   
 .form {

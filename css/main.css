@@ -325,6 +325,8 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -646,6 +648,7 @@ p {
   background-color: transparent;
   color: var(--color-text);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
 }
 
 .footer-form__button--pointer {
@@ -683,8 +686,7 @@ p {
 
 .hero {
   padding: 200px 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -745,8 +747,7 @@ p {
 .feature-list {
   display: flex;
   justify-content: space-between;
-  width: 1170px;
-  min-height: 101px;
+  width: inherit;
   margin: 0;
 }
 
@@ -986,21 +987,14 @@ p {
   height: 100%;
   background-color: var(--modal);
   opacity: 1;
-  visibility: visible;
-  transition: opacity, visibility 250ms var(--cubic);
   pointer-events: none;
+  transition: 250ms var(--cubic);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition: opacity, visibility 250ms var(--cubic);
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.1);
-  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
 }
 
 .modal {
@@ -1011,7 +1005,7 @@ p {
   min-width: 528px;
   padding: 40px;
   background-color: var(--background-card);
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1.1);
   transition: transform 250ms var(--cubic);
   overflow-y: auto;
   pointer-events: auto;
@@ -1038,17 +1032,17 @@ p {
   border-radius: 50%;
 }
 
+.modal__btn-close:hover, .modal__btn-close:focus {
+  color: var(--icon-hover);
+  transition: color 250ms var(--cubic);
+}
+
 .modal__icon-close {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   fill: currentColor;
-}
-
-.modal__icon-close:hover, .modal__icon-close:focus {
-  color: var(--icon-hover);
-  transition: color 250ms var(--cubic);
 }
 
 .form {

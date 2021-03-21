@@ -10,8 +10,7 @@
 .feature-list {
   display: flex;
   justify-content: space-between;
-  width: 1170px;
-  min-height: 101px;
+  width: inherit;
   margin: 0;
 
   &__item {
