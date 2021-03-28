@@ -891,7 +891,6 @@ summary {
   max-width: 1600px;
   display: block;
   background-color: var(--background);
-  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/Hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1651,9 +1650,15 @@ summary {
 
 @media screen and (min-width: 768px) {
   .button {
-    padding: 0;
+    padding-top: 60px;
     display: flex;
     margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button {
+    padding: 0;
   }
 }
 

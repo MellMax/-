@@ -20,9 +20,13 @@
   }
 
   @media screen and (min-width:$tablet) {
-    padding: 0;
+    padding-top: 60px;
     display: flex;
     margin-bottom: 50px;
+  }
+
+  @media screen and (min-width:$desktop) {
+    padding: 0;
   }
 
 
