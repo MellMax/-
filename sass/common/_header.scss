@@ -1,23 +1,49 @@
 .header {
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
-  
-  font-style: normal;
-  font-weight: 500;
-  color: var(--page-text);
-  background-color: var(--color-text);
   border-bottom: 1px solid var(--border-color);
 
+
   &__container {
+    position: relative;
     display: flex;
-    align-items: center;
+    min-height: 60px;
     justify-content: space-between;
+    padding: 10px 15px;
+
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
+      display: flex;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 0;
+      padding-bottom: 0;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    @media screen and( min-width:$desktop) {
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+      
+      font-style: normal;
+      font-weight: 500;
+      color: var(--page-text);
+      background-color: var(--color-text);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+  
   }
 
-  &__logo {
-    margin-right: 93px;
-    
+  &__site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo { 
     font-family: Raleway, sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -28,6 +54,8 @@
     text-decoration: none;
     align-items: center;
     display: flex;
+
+   
   }
 
   &__span {
@@ -39,27 +67,52 @@
   }
 }
   
-
-  
 .header-list {
-  padding: 0;
-  margin-left: auto;
-  display: flex;
-  align-items: center;
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width:$desktop) {
+    padding: 0;
+    // margin-left: 93px;
+    display: flex;
+    align-items: center;
+  }
 
   &__item {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
   }
 
   &__list-item {
     margin-left: 50px;
+
+    @media screen and (min-width: $tablet) {
+      margin: 0;
+      
+    }
   }
 
   &__list-item:first-child {
-    margin-left: auto;
+    // margin-left: auto;
     margin-right: 30px;
+
+    @media screen and (min-width: $tablet) {
+      margin: 0;
+      margin-bottom: 10px;
+      
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-left: auto;
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
   }
 
   &__link-nav {
@@ -68,21 +121,37 @@
     padding-top: 32px;
     padding-bottom: 32px;
     transition: color 250ms var(--cubic);
+    align-items: flex-start;
+    justify-content: space-between;
+    
+    bottom: -1px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--text-logo);
   }
 
-  &__link-nav.current::after {
-    position: absolute;
-    content: " ";
-    display: block;
-    left: 0;
-    bottom: -1px;
-    margin: 0 auto;
-    margin-top: 28px;
+  &__link-nav.current {
+    color: var(--icon-hover);
+  }
+  
+  @media screen and (min-width: $tablet) {
+    &__link-nav.current::after {
+      position: absolute;
+      content: " ";
+      display: block;
+      left: 0;
+      bottom: -1px;
+      margin: 0 auto;
+      margin-top: 28px;
+      
+      width: 100%;
+      height: 4px;
+      background-color: var(--icon-hover);
+      border-radius: 2px;
+    }
     
-    width: 100%;
-    height: 4px;
-    background-color: var(--icon-hover);
-    border-radius: 2px;
   }
 
   &__link-nav {
@@ -113,18 +182,36 @@
   }
   
   &__contact {
-    display: flex;
-    align-items: center;
-  
+    display: none;
+    color: var(--cord-color);
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--cord-color);
     padding-top: 32px;
     padding-bottom: 32px;
     transition: color 250ms var(--cubic);
+  
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      // flex-wrap: wrap;
+      align-items: center;
+      padding: 0;
+      
+    }
+  
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+      flex-direction: inherit;
+      font-size: 14px;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      
+      
+    }
+   
   }
   
   &__contact:hover,
@@ -136,14 +223,15 @@
     margin-right: 10px;
     fill: currentColor;
   }
+ 
+  .header-contacts__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
 }
-  
 
-  
+.contacts {
+  flex-wrap: wrap;
+  margin-left: 84px;
 
-  
-  
-
-  
-
-  
+}

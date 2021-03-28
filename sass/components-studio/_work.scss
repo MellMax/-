@@ -1,6 +1,11 @@
 .work {
   padding-bottom: 108px;
 
+  @media screen and (max-width: 1199px) {
+    display: none;  
+  }
+
+
   &__title {
     font-size: 36px;
     line-height: 1.16;

@@ -4,12 +4,23 @@
   display: block;
 
   &__title {
-    margin-bottom: 50px;
-    text-align: center;
+    font-style: normal;
     font-weight: bold;
-    font-size: 36px;
-    line-height: 1.16;
+    font-size: 28px;
+    line-height: 1.17;
+    
+    text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 50px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.16;
+      letter-spacing: 0.03em;
+    }
   }
 }
   
@@ -18,11 +29,65 @@
 .clients-list {
   display: flex;
 
-  &__item {
+  @media screen and (min-width: 480px), (max-width: $mobile) {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    
+   @media screen and (min-width: $mobile), (max-width: $mobile) {
+      margin-right: 30px;
+      margin-top: 30px;
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-top: 50px;
+      flex-basis: calc((100% - 150px) / 6);
+    }
+    
+  }
+
+  &__item:nth-child(2n) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
+      margin-right: 0;
+    }
+  
+    @media screen and (min-width: $tablet) {
+      margin-right: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 30px;
+    }
+  }
+  
+  &__item:last-child {
+    margin-right: 0;
+  
+    @media screen and (min-width: $tablet) {
+      margin-right: auto;
+    }
+  }
+  
+  &__item:nth-child(3n + 3) {
+    @media screen and (min-width: $tablet) {
+      margin-right: 0;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 30px;
+    }
+  }
+  
+  &__item:nth-child(6) {
+    @media screen and (min-width: $desktop) {
+      margin-right: 0;
+    }
   }
 
   &__item:last-child {
@@ -39,6 +104,19 @@
     border: 1px solid var(--icon-social);
     border-radius: 4px;
     color: var(--icon-social);
+
+
+    @media screen and (min-width: 480px), (max-width: 480px) {
+      width: 210px;
+    }
+
+    @media screen and (min-width: 767px) {
+      width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
   }
 
   &__icon {
@@ -52,9 +130,3 @@
     transition: color 250ms var(--cubic);
   }
 }
-  
-
-
-  
-
-  

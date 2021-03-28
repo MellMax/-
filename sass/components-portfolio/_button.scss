@@ -1,11 +1,35 @@
 .button {
+  // display: inline-block;
+  // flex-wrap: wrap;
+  
+  // padding: 0;
+  // justify-content: center;
+
+   
   display: flex;
-  margin-bottom: 50px;
-  padding: 0;
-  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  padding-bottom: 30px;
+    
+  @media screen and (min-width:$tablet) {
+    display: inline-block;
+    flex-wrap: wrap;
+  
+    padding-top: 60px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width:$tablet) {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
 
   &__item {
     margin-right: 8px;
+
+    margin-top: 10px;
+    margin-bottom: 10px
   }
   
   &__btn {

@@ -4,13 +4,22 @@
   padding: 60px 0; 
 
   &__container {
-    display: flex;
+    display: block;
     align-items: baseline;
+
+    @media screen and (min-width:$tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 
   &__content {
-    margin: 0;
     vertical-align: baseline;
+
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 
   &__logo {
@@ -37,7 +46,7 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  .contacts-links__address {
+  &__address {
     color: var(--color-text);
     font-size: 14px;
     line-height: 1.7;
@@ -75,7 +84,12 @@
 
   
 .footer-social {
-  margin-left: 70px;
+  margin-top: 60px;
+
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+  }
 
   &__title {
     margin-bottom: 20px;
@@ -85,7 +99,11 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--background-card);
-    text-align: left;
+    text-align: center;
+
+    @media screen and (min-width:$desktop) {
+      text-align: left;
+    }
   }
   
   &__list {
@@ -93,7 +111,11 @@
     display: flex;
     margin-top: 16px;
     background-color: transparent;
-    justify-content: space-between;
+    justify-content: center;
+    
+    @media screen and (min-width:$desktop) {
+      justify-content: space-between;
+    }
   }
   
   &__item {
@@ -134,7 +156,23 @@
 
   
 .footer-form {
-  margin-left: 93px;
+  margin-top: 60px;
+  text-align: center;
+
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+    flex-direction: column; 
+    align-items: center;
+    display: flex;
+  }
+
+
+  @media screen and (min-width:$desktop) {
+    margin-left: 93px;
+    display: block;
+    
+  }
+
 
   &__title {
     margin-bottom: 20px;
@@ -144,11 +182,23 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--background-card);
-    text-align: left;
+    text-align: center;
+
+    @media screen and (min-width:$desktop) {
+      text-align: left;
+      
+    }
+    
   }
   
   &__item {
     display: inline-block;
+    margin-bottom: 20px;
+    @media screen and (min-width:$desktop) {
+      margin: 0;
+    }
+      
+    
   }
   
   &__input {
@@ -158,7 +208,17 @@
     background-color: transparent;
     color: var(--color-text);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px
+    border-radius: 4px;
+
+    @media screen and (max-width:$mobile) {
+      min-width: 450px;
+      
+    }
+
+    @media screen and (min-width:$desktop) {
+      min-width: 358px;
+      
+    }
   
   }
   
