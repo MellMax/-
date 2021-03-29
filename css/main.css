@@ -603,6 +603,12 @@ summary {
     padding-top: 32px;
     padding-bottom: 32px;
   }
+  .header-list__contact.mail {
+    padding-top: 32px;
+  }
+  .header-list__contact.tel {
+    padding-bottom: 32px;
+  }
 }
 
 .header-list__contact:hover, .header-list__contact:focus {
@@ -955,7 +961,7 @@ summary {
   .hero {
     background-repeat: no-repeat;
     background-position: center;
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/img/hero@2x-1600.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/hero@2x-1600.jpg");
   }
 }
 

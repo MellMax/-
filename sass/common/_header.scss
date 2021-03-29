@@ -220,7 +220,13 @@
       padding-top: 32px;
       padding-bottom: 32px;
       
-      
+      &.mail {
+        padding-top: 32px;
+      }
+
+      &.tel {
+        padding-bottom: 32px;
+      }
     }
    
   }
