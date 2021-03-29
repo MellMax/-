@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-bottom: 60px;
+
 
   @media screen and (max-width: 480px) {
     padding-top: 118px;
@@ -23,7 +23,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("/img/hero@1x-480.jpg");
+      url("../img/hero@1x-480.jpg");
     background-size: cover;
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -33,7 +33,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url("/img/hero@2x-480.jpg");
+        url("../img/hero@2x-480.jpg");
     }
   }
 
@@ -45,7 +45,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("/img/hero@1x-768.jpg");
+      url("../img/hero@1x-768.jpg");
 
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -57,7 +57,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url("/img/hero@2x-768.jpg");
+        url("../img/hero@2x-768.jpg");
     }
   }
 
@@ -70,7 +70,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("/img/hero@1x-1600.jpg");
+      url("../img/hero@1x-1600.jpg");
     background-size: 1600px 600px;
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -97,14 +97,18 @@
     color: var(--color-text);
     text-transform: uppercase;
     text-align: center;
-    width: 360px;
+    font-size: 24px;
+    line-height: 1.61;
+    text-transform: uppercase;
+    // width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (min-width: $tablet) {
       margin-bottom: 30px;
-      font-size: 26px;
+      // font-weight: 900;
+      font-size: 24px;
       line-height: 1.61;
       width: 360px;
       margin-left: auto;

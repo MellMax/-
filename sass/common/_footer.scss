@@ -168,6 +168,7 @@
 
 
   @media screen and (min-width:$desktop) {
+    margin-top: 0;
     margin-left: 93px;
     display: block;
     
@@ -194,6 +195,10 @@
   &__item {
     display: inline-block;
     margin-bottom: 20px;
+
+    @media screen and (max-width:$tablet) {
+      width: 100%;
+    }
     @media screen and (min-width:$desktop) {
       margin: 0;
     }
@@ -203,15 +208,15 @@
   
   &__input {
     height: 50px;
-    min-width: 358px;
+    width: 100%;
     padding: 15px 16px;
     background-color: transparent;
     color: var(--color-text);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
 
-    @media screen and (max-width:$mobile) {
-      min-width: 450px;
+    @media screen and (min-width:$tablet) {
+      min-width: 358px;
       
     }
 

@@ -61,8 +61,13 @@
   }
   
   &__link {
+    height: 100%;
+    width: 100%;
     display: block;
     transition: box-shadow 250ms var(--cubic);
+    border-right: 1px solid var(--background-card-project);
+    border-bottom: 1px solid var(--background-card-project);
+    border-left: 1px solid var(--background-card-project);
   }
   
   &__link:hover, 
@@ -107,12 +112,12 @@
   
   &__title-project {
     padding: 20px 24px;
-    border-right: 1px solid var(--background-card-project);
-    border-bottom: 1px solid var(--background-card-project);
-    border-left: 1px solid var(--background-card-project);
+    // border-right: 1px solid var(--background-card-project);
+    // border-bottom: 1px solid var(--background-card-project);
+    // border-left: 1px solid var(--background-card-project);
     border-radius: 4px;
     border-top: none;
-    flex-grow: 1;
+    // flex-grow: 1;
   }
   
   &__title-project:hover &__overlay-text,

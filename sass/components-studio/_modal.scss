@@ -8,7 +8,7 @@
   opacity: 1;
   pointer-events: none;
   transition: 250ms var(--cubic);
-  z-index: 5;
+  
 
 }
   
@@ -27,6 +27,8 @@
     
   transform: translate(-50%, -50%) scale(1.1);
   transition: transform 250ms var(--cubic);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
   pointer-events: auto;
 

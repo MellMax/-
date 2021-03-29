@@ -194,12 +194,23 @@
     transition: color 250ms var(--cubic);
   
     @media screen and (min-width: $tablet) {
+      
       display: flex;
       // flex-wrap: wrap;
       align-items: center;
       padding: 0;
+
+      &.mail {
+        padding-top: 21px;
+      }
+
+      &.tel {
+        padding-bottom: 21px;
+      }
       
     }
+
+   
   
     @media screen and (min-width: $desktop) {
       display: flex;
