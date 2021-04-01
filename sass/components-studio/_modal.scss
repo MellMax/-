@@ -183,7 +183,7 @@
   
   &__icon {
     margin-right: 7px;
-    width: 16px;
+    min-width: 16px;
     height: 15px;
     
     border: 2px solid #2a2a2a;
@@ -205,9 +205,21 @@
   }
    
   &__contract {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
     color: var(--logo);
     text-decoration-line: underline;
     cursor: pointer;
+  }
+
+  &__text {
+    @media screen and (max-width: $mobile) {
+      width: 370px;
+      text-align: center;
+    }
   }
 }
   

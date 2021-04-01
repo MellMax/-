@@ -102,6 +102,10 @@
   
     color: #757575;
     text-decoration: none;
+
+    @media screen and (max-width: $mobile) { 
+      width: 296px;
+    }
   }
 
   &__email {
